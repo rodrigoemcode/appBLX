@@ -5,7 +5,7 @@ class User(BaseModel):
     id: Optional[str] = None
     name: str
     phone: str
-    my_products: List[Products]
+    my_products: List[Product]
     my_sales: List[Request]
     my_request: List[Request]
 
