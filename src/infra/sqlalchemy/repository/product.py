@@ -8,10 +8,18 @@ class ProductRepository():
         self.db = db
     
     def create(self, product: schemas.Product):
-        db_product = models.Product(name = product.name,)
+        db_product = models.Product(name = product.name,
+                                    detail=product.detalhes,
+                                    price = product.price,
+                                    status = product.status)
+        self.db.add(db_product)
+        self.db.commit()
+        self.db.refresh(db_product)
+        return db_product
     
     def list(self):
-        pass
+        products = self.db.query(models.Product).all()
+        return db_product
     
     def obtain(self):
         pass
