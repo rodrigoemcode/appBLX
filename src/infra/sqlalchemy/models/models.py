@@ -6,6 +6,6 @@ class Produto(Base):
     __tablename__ = "products"
     
     id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String)
-    preco = Column(Float)
-    disponivel = Column(Boolean)
+    name = Column(String)
+    price = Column(Float)
+    status = Column(Boolean)
