@@ -10,8 +10,7 @@ class User(BaseModel):
     my_request: List[Request]
 
 class Product(BaseModel):
-    id: Optional[str] = None
-    user: User
+    id: Optional[str] = None 
     name: str
     detail: str
     price: float
